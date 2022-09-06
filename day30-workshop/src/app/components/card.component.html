@@ -1,0 +1,9 @@
+<!-- <p>card works!</p> -->
+
+<img *ngFor="let card of cards" 
+  [ngClass]="{'darker' : hover, 'thumbnail' : true}" 
+  [src]="card" 
+  (mouseenter) = "hoverIn()"
+  (mouseleave) = "hoverOut()"
+  />
+

@@ -1,0 +1,12 @@
+.thumbnail {
+  display: inline-block !important;
+  border: 3px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 150px;
+  margin: 15px 8px;
+}
+
+.darker {
+  filter: brightness(50%);
+}
