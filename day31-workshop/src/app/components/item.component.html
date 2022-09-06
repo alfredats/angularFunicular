@@ -1,0 +1,50 @@
+<!-- <p>item works!</p> -->
+
+
+<form [formGroup]="itemForm" (ngSubmit)="processForm()">
+    <table>
+        <thead>
+            <td>
+                <h2>Items</h2>
+            </td>
+        </thead>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="" id="" formControlName="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Unit Price</td>
+            <td>
+                <input type="text" name="" id="" formControlName="unitPrice">
+            </td>
+        </tr>
+        <tr>
+            <td>Quantity:</td>
+            <td>
+                <select name="" id="" formControlName="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" [disabled]="itemForm.invalid">Add to Cart</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+

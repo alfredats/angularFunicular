@@ -1,0 +1,4 @@
+<div class="split">
+    <app-item class="boxed" (onItemAdd)="addItem($event)"></app-item>
+    <app-cart class="centered cart" [cartSize] = "itemCartSize" [cart]="itemCart" (onItemRemove)="removeItem($event)"></app-cart>
+</div>

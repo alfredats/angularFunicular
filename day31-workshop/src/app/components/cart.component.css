@@ -1,0 +1,22 @@
+table {
+    border-spacing: 0;
+}
+
+thead {
+    background-color: lightgrey;
+}
+
+thead td {
+    text-align: center;
+    padding: 1rem;
+}
+
+tr {
+    background-color: antiquewhite;
+}
+
+tr td {
+    text-align: center;
+    /* font-weight: bold; */
+}
+

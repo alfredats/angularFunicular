@@ -1,0 +1,14 @@
+<!-- <app-greetings [name]="globalName"></app-greetings>
+<app-greetings name="Mat"></app-greetings>
+
+
+
+<h1 *ngIf="globalName.length > 3">hello, {{globalName}}</h1>
+
+<div *ngFor="let n of nameArr; let i = index">
+  <app-greetings [name]="n + ' ' +  i | uppercase" ></app-greetings>
+</div> -->
+
+
+<app-registration [registration]="defaultRegistration" (onNewRegistration)="newRegistration($event)"></app-registration>
+<app-registration></app-registration>

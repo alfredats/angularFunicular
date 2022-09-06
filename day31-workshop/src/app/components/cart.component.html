@@ -1,0 +1,25 @@
+
+<table>
+    <thead>
+        <td>Name</td>
+        <td>Unit Price</td>
+        <td>Quantity</td>
+        <td>Cancel</td>
+    </thead>
+    <tr *ngFor="let ikv of cart | keyvalue">
+        <td>{{ikv.key}}</td>
+        <td>{{ikv.value.unitPrice}}</td>
+        <td>{{ikv.value.quantity}}</td>
+        <td>
+            <button type="submit" (click)="onCancel(ikv.value)">X</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Total</td>
+        <td>
+            {{ total.toFixed(2) }}
+        </td>
+        <td></td>
+    </tr>
+</table>
