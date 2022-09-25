@@ -1,0 +1,43 @@
+<div>
+  <h2>Purchase Order</h2>
+  <form [formGroup]="form">
+    <div>
+      <label for="">Name: </label>
+      <input type="text" formControlName="name"/>
+    </div>
+    <div>
+      <label for="">Mobile: </label>
+      <input type="text" formControlName="mobile"/>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="form.invalid" (click)="processForm()">Save</button>
+      <button type="button" (click)="addItem()">Add</button>
+    </div>
+
+    <table [ngClass]="{'hidden': noItems() }">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of itemsFormArray.controls; let i = index;" [formGroup]="item">
+          <td>
+            <input type="text" formControlName="item">
+          </td>
+          <td>
+            <input type="number" min="1" formControlName="quantity">
+          </td>
+          <td>
+            <button type="button" (click)="removeItem(i)">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </form>
+
+</div>

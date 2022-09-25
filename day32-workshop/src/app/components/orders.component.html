@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let ikv of ordersDB | keyvalue">
+        <tr>
+            <td>
+                <p>{{ ikv.key }}</p>
+            </td>
+            <td>
+                <p>{{ ikv.value.name }}</p>
+            </td>
+            <td>
+                <button (click)="sendForUpdate(ikv.key)">Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

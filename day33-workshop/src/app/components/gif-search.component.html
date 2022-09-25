@@ -1,0 +1,56 @@
+<form [formGroup]="form" (ngSubmit)="processForm()">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="">API Key: </label>
+                </td>
+                <td>
+                    <input class="text" name="" type="text" value="" formControlName="apiKey"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Search: </label>
+                </td>
+                <td>
+                    <input class="text" name="" type="text" value="" formControlName="search" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Results: </label>
+                </td>
+                <td>
+                    <select id="" name="" formControlName="results">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Rating: </label>
+                </td>
+                <td>
+                    <select id="" name="" formControlName="rating">
+                        <option value="g">g</option>
+                        <option value="pg">pg</option>
+                        <option value="pg-13">pg-13</option>
+                        <option value="r">r</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="submit">Search</button>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</form>

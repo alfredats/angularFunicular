@@ -1,0 +1,8 @@
+<div class="centered">
+  <webcam
+    [width]="width"
+    [trigger]="triggerObservable()"
+    (imageCapture)="handleImage($event)"
+  ></webcam>
+  <button (click)="triggerSnapshot()">Take a snapshot</button>
+</div>

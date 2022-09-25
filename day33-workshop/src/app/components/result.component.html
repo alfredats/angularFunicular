@@ -1,0 +1,4 @@
+<div *ngIf="images.length > 0">
+    <h2>Results</h2>
+    <img *ngFor="let url of images" [src]="url" alt="">
+</div>

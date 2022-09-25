@@ -1,0 +1,21 @@
+<div class="vert-ori mt-5">
+  <div class="centered">
+    <webcam
+      [width]="width"
+      [trigger]="trigger"
+      (imageCapture)="snapshot($event)"
+    >
+    </webcam>
+  </div>
+
+  <div class="space-around">
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="takePicture()"
+    >
+      Snap
+    </button>
+  </div>
+</div>

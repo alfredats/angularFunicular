@@ -1,0 +1,59 @@
+<div>
+    <form [formGroup]="form">
+        <div>
+            <label for="">Name: </label>
+            <input type="text" name="" id="" formControlName="name">
+        </div>
+
+        <div>
+            <label for="">Email: </label>
+            <input type="text" name="" id="" formControlName="email">
+        </div>
+
+        <div>
+            <button type="submit" (click)="processForm()">Save</button>
+            <button type="button" style="margin-left: 10px" (click)="addToDo()">Add</button>
+            <ng-content></ng-content>
+        </div>
+
+        <div>
+            <p>{{ form.get("name")?.hasError('required')}}</p>
+            <p>{{ form.get("email")?.hasError('required')}}</p>
+        </div>
+
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Todos</th>
+                    <th>Priority</th>
+                    <th>Cancel</th>
+                </tr>
+            </thead>
+            <tbody formArrayName="todos">
+                <tr *ngFor="let t of todoArrayCtrl.controls" [formGroup]="t">
+                    <td>
+                        <input type="text" name="" id="" formControlName="task">
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="button">X</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </form>
+
+
+
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="capturedImage !== null" style="margin: 2rem 0">
+  <img [src]="capturedImage.imageAsDataUrl" />
+</div>
+<form
+  *ngIf="capturedImage !== null"
+  [formGroup]="form"
+  (ngSubmit)="processForm()"
+>
+  <div class="">
+    <label for="">Caption: </label>
+    <input type="text" formControlName="title" />
+  </div>
+  <button type="submit">Upload</button>
+</form>

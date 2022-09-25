@@ -1,0 +1,4 @@
+<div class="split">
+    <app-purchase-order [update]="toUpdate"></app-purchase-order>
+    <app-orders (orderIDToUpdate)="forwardOrderID($event)"></app-orders>
+</div>
